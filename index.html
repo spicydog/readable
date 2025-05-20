@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <title>Readable</title>
         <meta charset="UTF-8">
-        <style>
-            body {
-                margin: 0px;
-                width: 100vw;
-                height: 100vh;
-                background: #F0EFEA;
-            }
-            .header {
-                text-align: center;
-            }
-            .title {
-                width: 100vw;
-                height: 10vh;
-                text-align: center;
-            }
-            #workarea {
-                width: 80vw;
-                height: 100vh;
-                font-size: 1.2em;
-                line-height: 2em;
-                font-family: "PT Serif";
-                background: #F0EFEA;
-                padding-left: 10vw;
-                padding-right: 10vw;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
         
         
     </head>
 
     <body>
-        
-        <textarea id="workarea" placeholder="paste content here.."></textarea>
-        
-        <script>
-            var workSpace = document.getElementById('workarea');
-            var currentDataKey = "currentData";
-            if( localStorage[currentDataKey] )
-            {
-                data = localStorage[currentDataKey];
-                workSpace.value = data;
-            }
-            
-            workSpace.addEventListener("change", function() {
-                localStorage[currentDataKey] = workSpace.value;
-            }, false);
-            
-        </script>
+        <header>
+            <h1>Readable</h1>
+        </header>
+        <main>
+            <textarea id="workarea" placeholder="paste content here.." aria-label="Main content area for text input"></textarea>
+            <div id="controls">
+                <button id="increaseFontButton">Increase Font</button>
+                <button id="decreaseFontButton">Decrease Font</button>
+                <button id="clearButton">Clear Text</button>
+            </div>
+        </main>
+        <script src="script.js"></script>
         
     </body>
 

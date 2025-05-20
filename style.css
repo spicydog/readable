@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0px;
+    background: #F0EFEA;
+    font-family: "PT Serif", serif; /* Apply consistent font */
+}
+
+header { /* Style header tag directly */
+    text-align: center;
+    padding: 1em 0;
+    background-color: #DDD; /* Distinct background */
+    color: #333; /* Distinct text color */
+}
+
+header h1 { /* h1 within header */
+    margin: 0;
+}
+
+main {
+    flex-grow: 1; /* Make main content area fill available space */
+    display: flex; /* Allow textarea to be centered or fill space */
+    flex-direction: column; /* Ensure textarea can grow */
+}
+
+#workarea {
+    width: 80%; /* 80% of parent (main) */
+    margin: 0 auto; /* Centered */
+    padding: 1em; /* Padding */
+    border: 1px solid #CCC; /* Border */
+    flex-grow: 1; /* Fill available space in main */
+    font-size: 1.2em;
+    line-height: 1.6em; /* Adjusted line-height slightly for better readability */
+    font-family: "PT Serif", serif; /* Ensure font is applied */
+    background: #F0EFEA; /* Existing background */
+    /* Remove fixed height and padding-left/right */
+}
+
+/* Removed .header and .title as they are no longer used or are covered by header styling */
